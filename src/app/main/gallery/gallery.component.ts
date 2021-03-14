@@ -48,7 +48,6 @@ export class GalleryComponent implements OnInit {
         });
       }
       this._communicationService.showLoaderSubject$.next(false);
-      console.log(this.characters);
     });
 
   }
