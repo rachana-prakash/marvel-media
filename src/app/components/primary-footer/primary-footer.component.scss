@@ -20,6 +20,16 @@ footer {
       padding: 5px;
       display: flex;
       justify-content: flex-end;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $marvel-grey;
+
+    &:hover {
+      color: $marvel-red;
     }
   }
 }
