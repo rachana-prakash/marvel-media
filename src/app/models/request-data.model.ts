@@ -9,7 +9,7 @@ export interface CardViewModel {
   title: string;
   description: string;
   id: number;
-  index: number;
+  index: string;
   imgURL: string;
 }
 

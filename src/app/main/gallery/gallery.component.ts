@@ -17,7 +17,7 @@ export class GalleryComponent implements OnInit {
     title: '',
     description: '',
     id: 0,
-    index: -1,
+    index: '',
     imgURL: ''
   };
   displaySelectedImage = false;
@@ -28,14 +28,13 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this._route.data.subscribe((data) => {
-
       if (data.characterData.characters) {
         this.characters = data.characterData.characters.map((item: Character, index: number) => {
           return {
             title: item.name,
             description: item.description,
             id: item.id,
-            index,
+            index: `${index}`,
             imgURL: `${item.thumbnail.path}/${this.imageVariant}.${item.thumbnail.extension}`
           };
         });
@@ -49,7 +48,6 @@ export class GalleryComponent implements OnInit {
       }
       this._communicationService.showLoaderSubject$.next(false);
     });
-
   }
 
   closeImageViewer(): void {
@@ -58,7 +56,7 @@ export class GalleryComponent implements OnInit {
       title: '',
       description: '',
       id: 0,
-      index: -1,
+      index: '',
       imgURL: ''
     };
   }
@@ -69,7 +67,7 @@ export class GalleryComponent implements OnInit {
   }
 
   navigateImage(character: CardViewModel, type: string): void {
-    let index = character.index;
+    let index = +character.index;
     switch (type) {
       case 'prev':
         this.selectedCharacter = {...this.characters[--index]};
