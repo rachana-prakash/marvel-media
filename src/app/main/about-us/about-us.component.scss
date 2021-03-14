@@ -1,0 +1,103 @@
+@import "../../../assets/theme/main-mixins";
+@import "../../../assets/theme/variables";
+
+.about-us-container {
+
+  .image-container {
+    background-image: url(../../../assets/images/about-us/avengers.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    color: white;
+    font-weight: bold;
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      height: 100%;
+    }
+
+    &:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.2);
+      height: 300px;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  .company-details {
+    display: flex;
+    padding: 20px;
+
+    .lhs-container {
+      flex-basis: 70%;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      p {
+        padding: 20px 0;
+
+        a {
+          @include link();
+        }
+      }
+
+      div {
+        padding: 20px 0;
+      }
+
+      .corporate-hq {
+        .marvel-entertainment {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+
+          b {
+            padding-bottom: 10px;
+          }
+
+          div {
+            padding: 2px 0;
+          }
+        }
+      }
+
+      .business {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          padding: 5px 0;
+        }
+      }
+    }
+
+    .rhs-container {
+      padding: 10px;
+      flex-basis: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      app-card-view {
+        flex-basis: 20%;
+        //margin: 10px;
+        //background: $marvel-black;
+        //cursor: pointer;
+        //position: relative;
+      }
+    }
+  }
+
+}
+
+
+

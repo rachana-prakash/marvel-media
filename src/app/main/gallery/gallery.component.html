@@ -1,0 +1,35 @@
+<div class="gallery-container">
+  <div class="title">
+    <h1> CHARACTERS IN ULTIMATE X-MEN VOL. 5: ULTIMATE WAR TPB</h1>
+    <h3> EXCLUSIVE LOOK</h3>
+  </div>
+  <div class="card-container">
+    <ng-container *ngFor="let character of characters">
+
+      <app-card-view [cardData]="character" (click)="viewCharacter(character)">
+
+      </app-card-view>
+    </ng-container>
+  </div>
+</div>
+
+
+<div class="image-viewer" *ngIf="displaySelectedImage">
+  <div class="header-container">
+    <div (click)="closeImageViewer()">
+      <mat-icon role="img" class="material-icons">close</mat-icon>
+    </div>
+  </div>
+  <div class="image-container">
+    <!-- check this as assignment, try to assign in ts error in this-->
+    <div class="previous" *ngIf="selectedCharacter?.index as index" [ngClass]="index <=0? 'disable': ''">
+      <mat-icon role="img" class="material-icons" (click)="navigateImage(selectedCharacter, 'prev')">arrow_back_ios
+      </mat-icon>
+    </div>
+    <img [src]="selectedCharacter?.imgURL"/>
+    <div class="next" *ngIf="selectedCharacter?.index as index" [ngClass]="index >=charactersLength-1? 'disable': ''">
+      <mat-icon role="img" class="material-icons" (click)="navigateImage(selectedCharacter, 'next')">arrow_forward_ios
+      </mat-icon>
+    </div>
+  </div>
+</div>

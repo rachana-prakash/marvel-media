@@ -1,0 +1,62 @@
+@import "../../../assets/theme/variables";
+
+nav {
+  padding: 15px;
+  background: $marvel-black;
+  color: white;
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 36px;
+      cursor: pointer;
+    }
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+
+    .header-item {
+      flex-basis: 100px;
+      padding: 5px;
+
+      &:last-child {
+        &.add-flex {
+          flex-basis: calc(100% - 300px);
+        }
+
+        &.remove-flex {
+          flex-basis: calc(100% - 200px);
+        }
+
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      a {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-bottom: 8px;
+
+        &:hover {
+          border-bottom: 2px solid $marvel-red;
+        }
+      }
+
+      .log {
+        &:hover {
+          color: $marvel-red;
+          border-bottom: none;
+        }
+      }
+
+      .welcome-text {
+        padding-right: 30px;
+      }
+    }
+  }
+}

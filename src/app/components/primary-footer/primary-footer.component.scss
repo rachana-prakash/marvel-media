@@ -1,0 +1,25 @@
+@import "../../../assets/theme/variables";
+
+footer {
+  padding: 15px;
+  background: $marvel-black;
+  color: $marvel-grey;
+
+  .footer-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+
+    .footer-item {
+      &:first-child {
+        flex-basis: calc(100% - 400px);
+        justify-content: flex-start;
+      }
+
+      flex-basis: 100px;
+      padding: 5px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

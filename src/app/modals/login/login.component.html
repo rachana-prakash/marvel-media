@@ -1,0 +1,18 @@
+<div class="form-container">
+  <form [formGroup]="loginForm">
+    <img [src]="logoPath"/>
+    <p class="memo"> Login to get an exclusive look at the characters in our new comic!</p>
+    <div class="form-control-container">
+      <p class="form-label">Username:</p>
+      <input formControlName="username" autocomplete="off"/>
+    </div>
+    <div class="form-control-container">
+      <p class="form-label">Password:</p>
+      <input formControlName="password" type="password" autocomplete="off"/></div>
+    <div class="form-footer">
+      <p class="empty"></p>
+      <button class="primary-btn" (click)="login()"> SIGN IN</button>
+      <button class="secondary-btn" (click)="cancel()"> CANCEL</button>
+    </div>
+  </form>
+</div>

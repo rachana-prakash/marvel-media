@@ -1,0 +1,11 @@
+<div class="container" [ngClass]="notificationData?.type==='success'? 'success': 'error'">
+  <div class="icon">
+    <mat-icon role="img" class="material-icons" *ngIf="notificationData?.type==='success'">circle_notifications
+    </mat-icon>
+    <mat-icon role="img" class="material-icons" *ngIf="notificationData?.type==='error'">error</mat-icon>
+  </div>
+  <div class="message">{{notificationData?.message}}</div>
+  <div class="close" (click)="closeNotification()">
+    <mat-icon role="img" class="material-icons">close</mat-icon>
+  </div>
+</div>

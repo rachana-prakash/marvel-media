@@ -1,0 +1,56 @@
+@import "../../../assets/theme/variables";
+
+:host {
+  height: 60px;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  height: 60px;
+  color: white;
+  font-weight: bold;
+
+  align-items: center;
+  border-radius: 5px;
+
+  &.error {
+    background: $marvel-danger;
+  }
+
+  &.success {
+    background: $marvel-success;
+  }
+
+  .icon, .message, .close {
+    padding: 2px;
+  }
+
+  .icon, .close {
+    flex-basis: 50px;
+  }
+
+  .message {
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-word;
+    padding: 2px;
+    font-size: 16px;
+    overflow: hidden;
+    flex-basis: calc(100% - 110px);
+  }
+
+  .close {
+
+  }
+}
