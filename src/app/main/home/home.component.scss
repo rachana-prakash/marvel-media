@@ -113,9 +113,11 @@ section {
     flex-basis: 30%;
     justify-content: flex-start;
     background: black;
+    border-radius: 10px;
 
     img {
       height: 500px;
+      border-radius: 10px;
     }
   }
 
@@ -129,7 +131,6 @@ section {
     justify-content: space-evenly;
 
     .memo {
-      //font-size: 30px;
       color: $marvel-red;
       font-weight: bold;
       text-transform: uppercase;
@@ -172,6 +173,7 @@ section {
 
         img {
           height: 300px;
+          border-radius: 10px;
         }
 
         a {

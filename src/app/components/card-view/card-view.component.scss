@@ -5,6 +5,7 @@
   background: $marvel-black;
   cursor: pointer;
   position: relative;
+  border-radius: 10px;
 
   &:after {
     content: "";
@@ -32,6 +33,8 @@
     height: 400px;
     width: 100%;
     object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
 
   .description-container {
