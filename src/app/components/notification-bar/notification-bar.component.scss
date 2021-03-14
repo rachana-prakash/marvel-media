@@ -38,6 +38,7 @@
 
   .icon, .close {
     flex-basis: 50px;
+    text-align: center;
   }
 
   .message {
@@ -46,6 +47,7 @@
     word-break: break-word;
     padding: 2px;
     font-size: 16px;
+    margin-bottom: 5px;
     overflow: hidden;
     flex-basis: calc(100% - 110px);
   }
