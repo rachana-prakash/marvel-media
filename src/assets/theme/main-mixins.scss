@@ -22,6 +22,7 @@
   overflow-x: hidden;
   @include scroll-bar();
   height: 100%;
+  width: 100%;
 }
 
 @mixin button() {

@@ -28,7 +28,7 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this._route.data.subscribe((data) => {
-      if (data.characterData.characters) {
+      if (data.characterData.characters && data.characterData.characters.length) {
         this.characters = data.characterData.characters.map((item: Character, index: number) => {
           return {
             title: item.name,
