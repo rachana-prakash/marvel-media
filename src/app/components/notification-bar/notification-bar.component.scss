@@ -1,5 +1,5 @@
 @import "../../../assets/theme/variables";
-
+@import "../../../assets/theme/main-mixins";
 :host {
   height: 60px;
   position: fixed;
@@ -16,7 +16,7 @@
 .container {
   display: flex;
   justify-content: space-evenly;
-  width: 40%;
+  width: 90%;
   height: 60px;
   color: white;
   font-weight: bold;
@@ -54,5 +54,11 @@
 
   .close {
 
+  }
+}
+
+@include main-desktop() {
+  .container {
+    width: 40%;
   }
 }
