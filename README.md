@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-##Features
+## Features
 `ngrx Stores` used for state management
 
 `local Storage` used for state management as well in case user refreshes the page
@@ -52,7 +52,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `copyright pdf` is a sample pdf not related to Marvel
 
-##Pages
+## Pages
 `home` contains interesting text and images with the latest marvel news
 
 `gallery` contains images in a grid view from a Marvel API. Clicking on the image opens an image viewer which can navigate to next or previous image
@@ -61,5 +61,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `login` contains a modal which has a form to enter login details
 
-##Login Details
+## Login Details
 Find login details in `src/assets/userDatabase.ts`
