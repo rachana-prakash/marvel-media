@@ -1,0 +1,50 @@
+@import "../../../assets/theme/variables";
+@import "../../../assets/theme/main-mixins";
+footer {
+  padding: 10px;
+  background: $marvel-black;
+  color: $marvel-grey;
+
+  .footer-container {
+    display: flex;
+    justify-content: flex-start;
+
+    .footer-item {
+
+      flex-basis: auto;
+      padding: 3px;
+      display: flex;
+      justify-content: flex-end;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $marvel-grey;
+
+    &:hover {
+      color: $marvel-red;
+    }
+  }
+}
+
+@include main-tablet() {
+  footer {
+    padding: 15px;
+
+    .footer-container {
+      padding: 5px;
+
+      .footer-item {
+        &:first-child {
+          justify-content: flex-start;
+          flex-basis: calc(100% - 400px);
+        }
+
+        flex-basis: 100px;
+        padding: 5px;
+      }
+    }
+  }
+}

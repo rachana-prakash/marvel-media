@@ -1,0 +1,60 @@
+@import "../../../assets/theme/variables";
+@import "../../../assets/theme/main-mixins";
+:host {
+  margin: 10px;
+  background: $marvel-black;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+
+  @include main-desktop() {
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-top: 25px solid $marvel-black;
+      right: 0;
+      border-right: 25px solid white;
+    }
+
+  }
+
+  &:hover {
+    background: $marvel-red;
+    transition: background 1s;
+  }
+}
+
+.card-wrap {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 40px 20px;
+    border-top: solid 4px $marvel-red;
+    color: white;
+
+
+    p {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    div {
+      padding-top: 8px;
+    }
+  }
+}

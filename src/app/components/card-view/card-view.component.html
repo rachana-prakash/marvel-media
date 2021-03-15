@@ -1,0 +1,8 @@
+<div class="card-wrap">
+  <img *ngIf="!imageLoadedFlag" [src]="'../../../assets/images/image-loader.gif'"/>
+  <img [hidden]="!imageLoadedFlag" (load)="imageLoadedFlag = true" [src]="cardData?.imgURL"/>
+  <div class="description-container">
+    <p>{{cardData?.title}}</p>
+    <div>{{cardData?.description || '[NO DESCRIPTION AVAILABLE]'}}</div>
+  </div>
+</div>

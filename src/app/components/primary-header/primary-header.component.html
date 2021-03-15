@@ -1,0 +1,22 @@
+<nav>
+  <div class="logo-container">
+    <img (click)="navigateTo('')" [src]="'../../../assets/images/marvel-logo.png'"/>
+  </div>
+  <ul class="header-container">
+    <li class="header-item">
+      <a (click)="navigateTo('')">Home</a>
+    </li>
+    <li *ngIf="loggedInStatus" class="header-item">
+      <a (click)="navigateTo('gallery')"> Gallery </a>
+    </li>
+    <li class="header-item">
+      <a (click)="navigateTo('about-us')">About Us</a>
+    </li>
+    <li class="header-item" [ngClass]="loggedInStatus? 'add-flex': 'remove-flex'">
+      <div class="welcome-text" *ngIf="loggedInStatus"> Welcome {{username}}!</div>
+      <a class="log" *ngIf="loggedInStatus" (click)="logout()"> Logout</a>
+      <a class="log" *ngIf="!loggedInStatus" (click)="openLoginModal()"> Login </a>
+    </li>
+  </ul>
+</nav>
+

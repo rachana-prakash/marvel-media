@@ -1,0 +1,96 @@
+@import "../../../assets/theme/variables";
+@import "../../../assets/theme/main-mixins";
+
+nav {
+  padding: 5px;
+  background: $marvel-black;
+  color: white;
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 36px;
+      cursor: pointer;
+    }
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: flex-start;
+
+    .header-item {
+      flex-basis: auto;
+      padding: 3px;
+
+      &:last-child {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+      }
+
+      .log {
+        &:hover {
+          color: $marvel-red;
+          border-bottom: none;
+        }
+      }
+
+      .welcome-text {
+        padding-right: 10px;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+@include main-tablet() {
+  nav {
+    padding: 15px;
+
+    .header-container {
+      padding: 5px;
+
+      .header-item {
+        flex-basis: 100px;
+        padding: 5px;
+
+        &:last-child {
+          &.add-flex {
+            flex-basis: calc(100% - 300px);
+          }
+
+          &.remove-flex {
+            flex-basis: calc(100% - 200px);
+          }
+
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        a {
+          padding-bottom: 8px;
+
+          &:hover {
+            border-bottom: 2px solid $marvel-red;
+          }
+        }
+
+        .welcome-text {
+          padding-left: 0;
+          padding-bottom: 8px;
+          padding-right: 30px;
+        }
+
+      }
+    }
+  }
+}
