@@ -20,6 +20,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       font-size: 40px;
       height: 100%;
     }
@@ -38,6 +39,7 @@
 
   .company-details {
     display: flex;
+    flex-direction: column;
     padding: 20px;
 
     .lhs-container {
@@ -97,14 +99,18 @@
 
       app-card-view {
         flex-basis: 20%;
-        //margin: 10px;
-        //background: $marvel-black;
-        //cursor: pointer;
-        //position: relative;
       }
     }
   }
 
+}
+
+@include main-tablet() {
+  .about-us-container {
+    .company-details {
+      flex-direction: row;
+    }
+  }
 }
 
 

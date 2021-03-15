@@ -1,5 +1,5 @@
 @import "../../../assets/theme/variables";
-
+@import "../../../assets/theme/main-mixins";
 :host {
   margin: 10px;
   background: $marvel-black;
@@ -7,16 +7,19 @@
   position: relative;
   border-radius: 10px;
 
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-top: 25px solid $marvel-black;
-    right: 0;
-    border-right: 25px solid white;
+  @include main-desktop() {
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-top: 25px solid $marvel-black;
+      right: 0;
+      border-right: 25px solid white;
+    }
+
   }
 
   &:hover {
