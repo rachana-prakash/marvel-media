@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 import {userDatabase} from '../../../assets/userDatabase';
 import {Store} from '@ngrx/store';
@@ -14,10 +14,10 @@ import {CommunicationService} from '../../service/communication.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup = new FormGroup({});
+  loginForm: UntypedFormGroup = new UntypedFormGroup({});
   logoPath = '../../../assets/images/marvel-logo.png';
 
-  constructor(private _formBuilder: FormBuilder, private _router: Router,
+  constructor(private _formBuilder: UntypedFormBuilder, private _router: Router,
               private _loginStore: Store<LoginState>, private _communicationService: CommunicationService) {
   }
 

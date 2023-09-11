@@ -27,12 +27,12 @@
     </div>
   </div>
   <div class="image-container">
-    <div class="previous" *ngIf="selectedCharacter?.index as index" [ngClass]="+index <=0? 'disable': ''">
+    <div class="previous" *ngIf="selectedCharacter.index as index" [ngClass]="+index <=0? 'disable': ''">
       <mat-icon role="img" class="material-icons" (click)="navigateImage(selectedCharacter, 'prev')">arrow_back_ios
       </mat-icon>
     </div>
-    <img [src]="selectedCharacter?.imgURL"/>
-    <div class="next" *ngIf="selectedCharacter?.index as index" [ngClass]="+index >=charactersLength-1? 'disable': ''">
+    <img [src]="selectedCharacter.imgURL"/>
+    <div class="next" *ngIf="selectedCharacter.index as index" [ngClass]="+index >=charactersLength-1? 'disable': ''">
       <mat-icon role="img" class="material-icons" (click)="navigateImage(selectedCharacter, 'next')">arrow_forward_ios
       </mat-icon>
     </div>

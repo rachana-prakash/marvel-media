@@ -1,13 +1,17 @@
-import {Injectable} from '@angular/core';
-import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router} from '@angular/router';
-import {LoginState} from '../state/app.reducer';
-import {Store} from '@ngrx/store';
-import {getLoggedInStatus} from '../state/app.selector';
+import { Injectable } from '@angular/core';
+import {
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  Router,
+} from '@angular/router';
+import { LoginState } from '../state/app.reducer';
+import { Store } from '@ngrx/store';
+import { getLoggedInStatus } from '../state/app.selector';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class AuthGuard {
   isLoggedIn = false;
 
   constructor(private _loginStore: Store<LoginState>, private _router: Router) {
@@ -18,13 +22,13 @@ export class AuthGuard implements CanActivate {
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean {
+    state: RouterStateSnapshot
+  ): boolean {
     if (!this.isLoggedIn) {
       this._router.navigate(['/marvelNews/home']).then(() => {
-        this._router.navigate([{outlets: {popup: ['login']}}]);
+        this._router.navigate([{ outlets: { popup: ['login'] } }]);
       });
     }
     return this.isLoggedIn;
   }
-
 }
